@@ -11,11 +11,13 @@ public class MainController {
 
 	@GetMapping("/")
 	public String index(){
+		System.out.println("Entrei no index");
 		return "index";
 	}
 	
 	@PostMapping("/hello")
 	public String sayHello(@RequestParam("name") String name, Model model){
+		System.out.println("Entrei no hello");
 		model.addAttribute("name", name);
 		return "hello";
 	}
